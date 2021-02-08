@@ -1,5 +1,7 @@
+if(localStorage.getItem("task")===undefined){
+    
 localStorage.setItem("task",stringify([]));
-
+}
 updateList();
 
 function addEvent()  {
