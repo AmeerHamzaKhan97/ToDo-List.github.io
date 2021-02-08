@@ -1,6 +1,6 @@
-if(localStorage.getItem("task")===undefined){
+if(localStorage.getItem("tasks")===undefined){
     
-localStorage.setItem("task",stringify([]));
+localStorage.setItem("tasks",stringify([]));
 }
 updateList();
 
@@ -14,7 +14,7 @@ function addEvent()  {
     tasksArr.push(input.value);
 
 //     localStorage.tasks = JSON.stringify(tasksArr);
-    localStorage.setItem("task",tasksArr);
+    localStorage.setItem("tasks",tasksArr);
 
 
     input.value = "";
@@ -52,7 +52,7 @@ function removeItem(span_tag){
 
     tasksArr.splice(index_num,1);
 
-    localStorage.setItem("task",tasksArr);
+    localStorage.setItem("tasks",tasksArr);
 
 
     updateList();
