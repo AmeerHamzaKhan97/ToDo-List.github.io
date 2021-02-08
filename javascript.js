@@ -1,5 +1,5 @@
 
-//localStorage.tasks=  JSON.stringify([]);
+localStorage.tasks=  JSON.stringify([]);
 
 updateList();
 
