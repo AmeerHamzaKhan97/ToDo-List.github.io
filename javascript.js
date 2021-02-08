@@ -4,6 +4,7 @@
 updateList();
 
 function addEvent()  {
+    console.log("adding event");
     //console.log(localStorage.tasks);
     let input = document.getElementById("Task_input");
 
@@ -19,6 +20,7 @@ function addEvent()  {
 }
 
 function updateList(){
+    console.log("updating ");
     let ul = document.getElementById("list-item");
 
      let tasksArr = JSON.parse(localStorage.tasks);
@@ -39,6 +41,7 @@ function updateList(){
 }
 
 function removeItem(span_tag){
+    console.log("remove item");
     //console.log(obj);
     let index_num= span_tag.parentElement.id;
 
