@@ -1,5 +1,4 @@
-
-localStorage.tasks=  JSON.stringify([]);
+localStorage.setItem("task",stringify([]));
 
 updateList();
 
@@ -8,11 +7,13 @@ function addEvent()  {
     //console.log(localStorage.tasks);
     let input = document.getElementById("Task_input");
 
-    let tasksArr = JSON.parse(localStorage.tasks);
+    let tasksArr = JSON.parse(localStorage.getItem("tasks"));
 
     tasksArr.push(input.value);
 
-    localStorage.tasks = JSON.stringify(tasksArr);
+//     localStorage.tasks = JSON.stringify(tasksArr);
+    localStorage.setItem("task",tasksArr);
+
 
     input.value = "";
 
@@ -23,7 +24,7 @@ function updateList(){
     console.log("updating ");
     let ul = document.getElementById("list-item");
 
-     let tasksArr = JSON.parse(localStorage.tasks);
+     let tasksArr = JSON.parse(localStorage.getItem("tasks"));
 
      let length  =tasksArr.length-1;
      let text = "";
@@ -45,11 +46,12 @@ function removeItem(span_tag){
     //console.log(obj);
     let index_num= span_tag.parentElement.id;
 
-    let tasksArr = JSON.parse(localStorage.tasks);
+    let tasksArr = JSON.parse(localStorage.getItem("tasks"));
 
     tasksArr.splice(index_num,1);
 
-    localStorage.tasks = JSON.stringify(tasksArr);
+    localStorage.setItem("task",tasksArr);
+
 
     updateList();
 
@@ -57,4 +59,3 @@ function removeItem(span_tag){
 
 
 }
-
